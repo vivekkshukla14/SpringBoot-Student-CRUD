@@ -1,0 +1,26 @@
+plugins {
+	id 'org.springframework.boot' version '2.5.1'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+//	id 'eclipse'
+	//id 'java-library-distribution'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	runtimeOnly('com.h2database:h2')
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.13.0'
+	
+}
+
